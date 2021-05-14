@@ -19,6 +19,7 @@ public class subversion {
 	main_GUI.setBounds(300,100,500,420);
 	main_GUI.setResizable(false); //������������� ������ ����
 	
+	
     Image logo = new Image();
     
 	JPanel main_panel = new JPanel(); //������ - ������������ ��� ����������� ����������� � ����
@@ -30,6 +31,7 @@ public class subversion {
 	JLabel usatu = new JLabel("�������� ��������������� ����������� ����������� �����������"); //����������� ������
 	usatu.setBounds(35,15,500,30);
 	main_panel.add(usatu); 
+	
 	
 	JButton button_exit = new JButton("�����"); //��������� ������ �� ����
 	button_exit.setBounds(380, 230, 90, 40);
@@ -43,7 +45,7 @@ public class subversion {
 	button_info.addActionListener(new ActionListener() {
 	@Override
 	public void actionPerformed(ActionEvent e) {
-			JOptionPane.showMessageDialog(main_GUI, text + "��������� ���������: ������� ����� ��������� - 19130633\n"
+			JOptionPane.showMessageDialog(main_GUI, text + "��������� ���������: ������� 15.05.21 ����� ��������� - 19130633\n"
 			+ "1-� �������� ���������: ��������� ������ �������� - 19130639\n"
 			+ "2-� �������� ���������: ������� 15.05.21 ����� ���������� - 19130620\n"
 			+ "3-� �������� ���������: �������� ������ �������������� - 19130635","������ � ����������", -1); }
