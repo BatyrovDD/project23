@@ -1,149 +1,149 @@
-package Laba2; //Пакет Java классов
+package Laba2; //пїЅпїЅпїЅпїЅпїЅ Java пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
-//Импортируем библиотеки
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener; //библиотека для события слушателя
+import java.awt.event.ActionListener; //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import javax.swing.*; // Библиотека для GUI (построена на основе awt)
+import javax.swing.*; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ GUI (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ awt)
 
 public class subversion {
 	private String text = "";
 	public subversion() {
-	JFrame main_GUI = new JFrame("subversion");	//Создание графического окна
-	main_GUI.setTitle ("ООМиП (23 вариант)");
+	JFrame main_GUI = new JFrame("subversion");	//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+	main_GUI.setTitle ("пїЅпїЅпїЅпїЅпїЅ (23 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ)");
 	main_GUI.setBounds(300,100,500,420);
-	main_GUI.setResizable(false); //Фиксированный размер окна
+	main_GUI.setResizable(false); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 	
     Image logo = new Image();
     
-	JPanel main_panel = new JPanel(); //Панель - используется для организации компонентов в окне
+	JPanel main_panel = new JPanel(); //пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ
 	main_panel.setLayout(null);
 	main_GUI.add(main_panel);
-	JLabel laba_info = new JLabel("Лабораторная работа №4"); //Отображение текста или изображения
+	JLabel laba_info = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ4"); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	laba_info.setBounds(150,3,150,30);
 	main_panel.add(laba_info);
-	JLabel usatu = new JLabel("Уфимский государственный авиационный технический университет"); //Отображение текста
+	JLabel usatu = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	usatu.setBounds(35,15,500,30);
 	main_panel.add(usatu); 
 	
-	JButton button_exit = new JButton("Выход"); //Добавляем кнопку на окно
+	JButton button_exit = new JButton("пїЅпїЅпїЅпїЅпїЅ"); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
 	button_exit.setBounds(380, 230, 90, 40);
-	ActionListener actionListener = new ListenerButton(); //Создаем слушатель
-	button_exit.addActionListener(actionListener); //Добавляем слушатель к кнопке
+	ActionListener actionListener = new ListenerButton(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	button_exit.addActionListener(actionListener); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	main_panel.add(button_exit);
 	
-	JButton button_info = new JButton("Информация"); // добавляем кнопку Информация
+	JButton button_info = new JButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	button_info.setBounds(15,230,110,40);
 	main_panel.add(button_info);
 	button_info.addActionListener(new ActionListener() {
 	@Override
 	public void actionPerformed(ActionEvent e) {
-			JOptionPane.showMessageDialog(main_GUI, text + "Модератор подгруппы: Батыров Денис Дамирович - 19130633\n"
-			+ "1-й участник подгруппы: Мингареев Радмир Адикович - 19130639\n"
-			+ "2-й участник подгруппы: Насыров Аскар Русланович - 19130620\n"
-			+ "3-й участник подгруппы: Погудина Милена Константиновна - 19130635","Данные о участниках", -1); }
+			JOptionPane.showMessageDialog(main_GUI, text + "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - 19130633\n"
+			+ "1-пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - 19130639\n"
+			+ "2-пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 15.05.21 пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - 19130620\n"
+			+ "3-пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - 19130635","пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", -1); }
 	});
 	
 	
 	
-	//Аскар
+	//пїЅпїЅпїЅпїЅпїЅ
 	
-	JLabel calclable = new JLabel("Расчет параллепипида в кубических сантиметрах");
+	JLabel calclable = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 	calclable.setBounds(15, 270, 500, 40);
 	main_panel.add(calclable);
-	JLabel calclable2 = new JLabel("Введите стороны, затем нажмите на кнопку расчета, для вычесления:");
+	JLabel calclable2 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:");
 	calclable2.setBounds(15, 285, 500, 40);
 	main_panel.add(calclable2);
-	JLabel a = new JLabel("длина:");
+	JLabel a = new JLabel("пїЅпїЅпїЅпїЅпїЅ:");
 	a.setBounds(15, 315, 50, 40);
 	main_panel.add(a);
-	JLabel b = new JLabel("ширина:");
+	JLabel b = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅ:");
 	b.setBounds(155, 315, 50, 40);
 	main_panel.add(b);
-	JLabel c = new JLabel("высота:");
+	JLabel c = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅ:");
 	c.setBounds(305, 315, 500, 40);
 	main_panel.add(c);
-	JLabel cm1 = new JLabel("см");
+	JLabel cm1 = new JLabel("пїЅпїЅ");
 	cm1.setBounds(110, 315, 50, 40);
 	main_panel.add(cm1);
-	JLabel cm2 = new JLabel("см");
+	JLabel cm2 = new JLabel("пїЅпїЅ");
 	cm2.setBounds(255, 315, 50, 40);
 	main_panel.add(cm2);
-	JLabel cm3 = new JLabel("см");
+	JLabel cm3 = new JLabel("пїЅпїЅ");
 	cm3.setBounds(405, 315, 50, 40);	
 	main_panel.add(cm3);
 	
-	//Были добавлены поле для ввода
-	JTextArea aTextArea = new JTextArea(""); // Окно для ввода значения a
+	//пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	JTextArea aTextArea = new JTextArea(""); // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ a
 	aTextArea.setBounds(58, 330, 50, 15);
 	main_panel.add(aTextArea);
-	JTextArea bTextArea = new JTextArea(""); // Окно для ввода значения b
+	JTextArea bTextArea = new JTextArea(""); // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ b
 	bTextArea.setBounds(204, 330, 50, 15);
 	main_panel.add(bTextArea);
-	JTextArea cTextArea = new JTextArea(""); // Окно для ввода значения c
+	JTextArea cTextArea = new JTextArea(""); // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ c
 	cTextArea.setBounds(355, 330, 50, 15);
 	main_panel.add(cTextArea);
 	
-// Милена
+// пїЅпїЅпїЅпїЅпїЅпїЅ
 	
-	JButton button_math = new JButton("Расчитать"); //Добавляем кнопку на окно
+	JButton button_math = new JButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
 	button_math.setBounds(135, 230, 100, 40);
 	main_panel.add(button_math);
 	button_math.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent eror) {
-		// Проверка на ввод некорректных символов и вывод ошибки пользователю 
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 
 		int a, b, c;
 		try {
 		a = Integer.parseInt(aTextArea.getText());
 		b = Integer.parseInt(bTextArea.getText());
 		c = Integer.parseInt(cTextArea.getText());
 		} catch (Exception errors) {
-		JOptionPane.showMessageDialog(null, "Введите корректные значения сторон!\n "
-		+ "\nМинимальное значение длина: 1 см\nМаксимальное значение длина: 1290 см"
-		+ "\nМинимальное значение высота: 1 см\nМаксимальное значение длина: 1290 cм"
-		+ "\nМинимальное значение высота: 1 см\nМаксимальное значение высота: 1290 cм");
+		JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!\n "
+		+ "\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: 1 пїЅпїЅ\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: 1290 пїЅпїЅ"
+		+ "\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: 1 пїЅпїЅ\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: 1290 cпїЅ"
+		+ "\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: 1 пїЅпїЅ\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: 1290 cпїЅ");
 		}
 		
-		// Проверка на ввод ограничений и вывод ошибки пользователю 
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 
 		a = Integer.parseInt(aTextArea.getText());
 		b = Integer.parseInt(bTextArea.getText());
 		c = Integer.parseInt(cTextArea.getText());
 		if (a > 1290 || a < 1 || b > 1290 || b < 1 || c > 1290 || c < 1) {
-		JOptionPane.showMessageDialog(null, "Введите корректные значения сторон!\n "
-		+ "\nМинимальное значение длина: 1 см\nМаксимальное значение длина: 1290 см"
-		+ "\nМинимальное значение высота: 1 см\nМаксимальное значение длина: 1290 cм"
-		+ "\nМинимальное значение высота: 1 см\nМаксимальное значение высота: 1290 cм");
+		JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!\n "
+		+ "\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: 1 пїЅпїЅ\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: 1290 пїЅпїЅ"
+		+ "\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: 1 пїЅпїЅ\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: 1290 cпїЅ"
+		+ "\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: 1 пїЅпїЅ\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: 1290 cпїЅ");
 		return;
 		}
 		int d = Calculator.getResult(a, b, c);
-		JOptionPane.showMessageDialog(main_GUI, "Объем параллепипида: " + d + " см^3");
+		JOptionPane.showMessageDialog(main_GUI, "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + d + " пїЅпїЅ^3");
 		}
 	});	
 	
-	String[] transfer = { //Добавление массива
-	        "Переместить логотип УГАТУ в верхний правый угол",
-	        "Переместить логотип УГАТУ в середину",
-	        "Переместить логотип УГАТУ в верхний левый угол",
-	        "Отсортировать данные в проекте23"
+	String[] transfer = { //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	        "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ",
+	        "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
+	        "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ",
+	        "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ23"
 	    };
-	JComboBox<Object> dram = new JComboBox<Object>(transfer); //Добавление объекта комбобокса
-	ActionListener dramaTransfer = new ActionListener() { //Создание слушателя
+	JComboBox<Object> dram = new JComboBox<Object>(transfer); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	ActionListener dramaTransfer = new ActionListener() { //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	    public void actionPerformed(ActionEvent e) {
 	                String choice = (String)dram.getSelectedItem();
 	                switch (choice) {
-	                //Перемещение изображения
-	                case "Переместить логотип УГАТУ в верхний правый угол":  logo.setLocation(270, 52);
+	                //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	                case "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ":  logo.setLocation(270, 52);
 	                break;
-	                case "Переместить логотип УГАТУ в середину":  logo.setLocation(140, 52);
+	                case "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ":  logo.setLocation(140, 52);
 	                break;
-	                case "Переместить логотип УГАТУ в верхний левый угол":  logo.setLocation(0, 52);
+	                case "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ":  logo.setLocation(0, 52);
 	                break;
-	                case "Отсортировать данные в проекте23":
+	                case "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ23":
 	                	FiveElements n = new FiveElements();
 		                int[] u = new int[n.odnomerniyMassiv.length];
 		                for (int i = 0; i < n.odnomerniyMassiv.length; i++) {
@@ -154,22 +154,22 @@ public class subversion {
 	                
 	    }
 	};
-	        dram.addActionListener(dramaTransfer); //Добавление слушателя к комбобоксу
-	        dram.setBounds(15,170,453,50); //Выставление размеров окна combobox
-	        main_panel.add(dram); //Добавление combobox на панель
+	        dram.addActionListener(dramaTransfer); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	        dram.setBounds(15,170,453,50); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ combobox
+	        main_panel.add(dram); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ combobox пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 
-	    //Добавдение кнопки "Меню"
+	    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅ"
 	    JMenuBar menu_bar= new JMenuBar();
-        JMenu menu= new JMenu("Меню");
+        JMenu menu= new JMenu("пїЅпїЅпїЅпїЅ");
         menu_bar.add (menu);
         
-        //Добавдение кнопки "Логотип УГАТУ" (помещает изображение на окно "Using subversion for developers")
-        JMenuItem menu1=new JMenuItem("Логотип УГАТУ");
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ" (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ "Using subversion for developers")
+        JMenuItem menu1=new JMenuItem("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ");
         menu1.addActionListener(new ActionListener() {
         	
         public void actionPerformed (ActionEvent event) {
         logo.setSize(500, 500);
-        logo.setLocation(270, 52); //Изначальное размещение изображение
+        logo.setLocation(270, 52); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         main_panel.add(logo);
         main_panel.setVisible(false);
         main_panel.setVisible(true);
@@ -177,13 +177,13 @@ public class subversion {
         });
         menu.add(menu1);        
         
-        JMenuItem menu3 = new JMenuItem("Загрузить файл в проект23");// создаем новую кнопку
+        JMenuItem menu3 = new JMenuItem("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ23");// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         menu3.addActionListener(new ListenerButton() {
         @Override
         public void actionPerformed(ActionEvent e) {
         text = "";
         JFileChooser fileopen = new JFileChooser();
-        int ret = fileopen.showDialog(null, "Открыть файл");
+        int ret = fileopen.showDialog(null, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ");
         if (ret == JFileChooser.APPROVE_OPTION) {
         File file = fileopen.getSelectedFile();
         FileReader fr = null;
@@ -213,14 +213,14 @@ public class subversion {
         });
         menu.add(menu3); 
         
-        //Добавдение кнопки "Выход" в верхнее меню
-        JMenuItem menu2=new JMenuItem("Выход");
-        ActionListener actionListener2 = new ListenerButton(); //Создаем слушатель
-        menu2.addActionListener(actionListener2); //Добавляем слушатель к кнопке
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅ" пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+        JMenuItem menu2=new JMenuItem("пїЅпїЅпїЅпїЅпїЅ");
+        ActionListener actionListener2 = new ListenerButton(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        menu2.addActionListener(actionListener2); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         menu.add(menu2);            
         main_GUI.setJMenuBar (menu_bar);
         main_GUI.setVisible(true);
-	main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);} //Закрытие окна JFrame и процесса Java
+	main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);} //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ JFrame пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Java
 
 	public static void main(String[] args) {
 		new subversion();
