@@ -2,7 +2,7 @@ language: java
 before_script:
   - echo "Starting build"
 script:
-  - mvn clean package
+  - mvn clean install
 after_script:
   - echo "Build is ready"
   - ls -l $TRAVIS_BUILD_DIR/target
