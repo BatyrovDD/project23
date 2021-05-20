@@ -1,6 +1,6 @@
-package Laba2; //Пакет Java классов
+package Laba2; //РџР°РєРµС‚ Java РєР»Р°СЃСЃРѕРІ
 
-//Импортируем библиотеки
+//РРјРїРѕСЂС‚РёСЂСѓРµРј Р±РёР±Р»РёРѕС‚РµРєРё
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -11,13 +11,13 @@ import javax.imageio.ImageIO;
 import javax.swing.JComponent;
 
 
-//Объявляем класс
+//РћР±СЉСЏРІР»СЏРµРј РєР»Р°СЃСЃ
 public class Image extends JComponent{
     BufferedImage image;
     
     public Image(){
         try{
-            image= ImageIO.read(new URL("http://xn--e1afhkfagivn.xn--p1ai/media/foto/logo.jpg")); //Расположение изображения логотипа УГАТУ
+            image= ImageIO.read(new URL("http://xn--e1afhkfagivn.xn--p1ai/media/foto/logo.jpg")); //Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ Р»РѕРіРѕС‚РёРїР° РЈР“РђРўРЈ
         }
         catch (IOException ugatu) {
             ugatu.printStackTrace();

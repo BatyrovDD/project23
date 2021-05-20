@@ -1,10 +1,10 @@
-	package Laba2;//пакет Java классов
-//Импортируем библиотеки
+	package Laba2;//РїР°РєРµС‚ Java РєР»Р°СЃСЃРѕРІ
+//РРјРїРѕСЂС‚РёСЂСѓРµРј Р±РёР±Р»РёРѕС‚РµРєРё
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-//Объявляем класс
+//РћР±СЉСЏРІР»СЏРµРј РєР»Р°СЃСЃ
 public class Calculator implements ActionListener {
 	protected static int getResult(int a, int b, int c) {
 		return (a * b * c);

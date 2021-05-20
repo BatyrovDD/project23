@@ -3,7 +3,7 @@ import java.awt.Component;
 import java.util.Arrays;
 
 import javax.swing.JOptionPane;
-//создала класс для третьего разработчика
+//СЃРѕР·РґР°Р»Р° РєР»Р°СЃСЃ РґР»СЏ С‚СЂРµС‚СЊРµРіРѕ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°
 public class SortBuble {
 
 		 public static void sortbuble(int[] mas) {

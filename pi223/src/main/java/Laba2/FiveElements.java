@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 import javax.swing.JOptionPane;
 
-//класс для второго разработчика
+//РєР»Р°СЃСЃ РґР»СЏ РІС‚РѕСЂРѕРіРѕ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°
 public class FiveElements {
 
 
