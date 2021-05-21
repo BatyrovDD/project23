@@ -43,7 +43,7 @@ public class subversion {
 	button_info.addActionListener(new ActionListener() {
 	@Override
 	public void actionPerformed(ActionEvent e) {
-			JOptionPane.showMessageDialog(main_GUI, text + "Модератор подгруппы: Батыров 15.05.21 Денис Дамирович - 19130633\n"
+			JOptionPane.showMessageDialog(main_GUI, text + "Модератор подгруппы: Батыров 22.05.21 Денис Дамирович - 19130633\n"
 			+ "1-й участник подгруппы: Мингареев 22.05.21 Радмир Адикович - 19130639\n"
 			+ "2-й участник подгруппы: Насыров 22.05.21 Аскар Русланович - 19130620\n"
 			+ "3-й участник подгруппы: Погудина 22.05.21 Милена Константиновна - 19130635","Данные о участниках", -1); }
